@@ -12,12 +12,22 @@
         $num= $_SESSION['aleatorio'];
         }
     
-        echo($_SESSION['aleatorio']);
         if($numero_input < $num){
-            echo("El número que buscas es mayor que $numero_input ($num)");            
+            echo("<p> El número que buscas es mayor que $numero_input ($num)</p>");            
         }elseif ($numero_input > $num) {
-             echo("El número que buscas es menor que $numero_input ($num)");
+             echo("<p> El número que buscas es menor que $numero_input ($num)</p>");
         }else{
-            echo "HAS ACERTADO, $num!!!";
+            echo "<p>HAS ACERTADO, $num!!!</p>";
+
+            $_SESSION = array();//deja el array de sesion vacio
+            session_destroy();//elimina la sesion
         }
+
+        // atras();
+        
+        // function atras(){            
+        //     header("Refresh: 4; url=" . $_SERVER['HTTP_REFERER']);
+        // }
+
+        
     ?>

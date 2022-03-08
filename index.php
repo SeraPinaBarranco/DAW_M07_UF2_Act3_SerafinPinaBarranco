@@ -9,7 +9,7 @@
 <body>
     <h2>Actividad 1</h2>
 
-        <a href="actividades/actividad1.php">Ir a actividad 1</a>
+        <a href="actividades/actividad1/actividad1.php">Ir a actividad 1</a>
     
     <h2>Fin actividad 1</h2>
 </body>
