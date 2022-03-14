@@ -1,8 +1,15 @@
 <?php       
         session_start();     
-        $num;
+        
+        if(empty($_POST['numero'])){ 
+            atras();
+            exit ("El número no puede estar vacio");           
+        }else{
+            $numero_input= $_POST['numero'];
 
-        $numero_input= $_POST['numero'];
+        }
+        
+        $num;
         
         //Si la variable de sesion existe, la almacena en $num
         if(isset($_SESSION['aleatorio'])){
