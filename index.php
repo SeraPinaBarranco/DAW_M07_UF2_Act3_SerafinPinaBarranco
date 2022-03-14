@@ -12,5 +12,13 @@
         <a href="actividades/actividad1/actividad1.php">Ir a actividad 1</a>
     
     <h2>Fin actividad 1</h2>
+
+    <hr>
+
+    <h2>Actividad 2</h2>
+
+        <a href="actividades/actividad2/actividad2.php">Ir a actividad 2</a>
+    
+    <h2>Fin actividad 2</h2>
 </body>
 </html>

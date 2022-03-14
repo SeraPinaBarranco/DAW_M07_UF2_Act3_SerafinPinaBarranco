@@ -1,15 +1,17 @@
-<?php        
-        include_once("genera_aleatorio.php");
-        $num = -1;
+<?php       
+        session_start();     
+        $num;
 
         $numero_input= $_POST['numero'];
         
-        //Si la variable de sesion no existe, la crea y la almacena en $num
+        //Si la variable de sesion existe, la almacena en $num
         if(isset($_SESSION['aleatorio'])){
             $num =  $_SESSION['aleatorio'];
+            echo "existe";
         }else{
-        $_SESSION['aleatorio'] = genera_aleatorio();
-        $num= $_SESSION['aleatorio'];
+            $_SESSION['aleatorio'] = genera_aleatorio();
+            $num= $_SESSION['aleatorio'];
+            echo "no existe";
         }
     
         if($numero_input < $num){
@@ -23,11 +25,15 @@
             session_destroy();//elimina la sesion
         }
 
-        // atras();
+        atras();
         
-        // function atras(){            
-        //     header("Refresh: 4; url=" . $_SERVER['HTTP_REFERER']);
-        // }
+        function atras(){            
+            header("Refresh: 4; url=" . $_SERVER['HTTP_REFERER']);
+        }
+
+        function genera_aleatorio(){        
+            return rand(0, 100);   
+        }
 
         
     ?>

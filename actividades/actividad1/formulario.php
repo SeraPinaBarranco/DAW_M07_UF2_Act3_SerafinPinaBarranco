@@ -9,7 +9,7 @@
 <body>
     
     <!-- <form action="scripts/aleatorios.php" method="post"> -->
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        <form action="scripts/aleatorios.php" method="post">
 
         <h3>Generar números aleatorios</h3>
         
