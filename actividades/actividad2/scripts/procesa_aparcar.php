@@ -33,6 +33,10 @@
             } 
         }
 
+        //ejecuta esto si ya no hay plazas en 0
+        
+        aparca_grande();
+
         //Si se ha llenado el array de plazas pequeñas, ira a aparcar en las grandes
         //if(array_search(0,$_SESSION['peq'],false) < 0){
             //echo "Plazas pequeñas llenas";
