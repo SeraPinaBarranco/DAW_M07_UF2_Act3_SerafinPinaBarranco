@@ -11,7 +11,7 @@
 
 <h2>Menú aparcamiento</h2>
 
-<form method="POST">
+<form action="redirigir.php" method="POST">
 
     <fieldset>
                 
@@ -33,17 +33,6 @@
     <input type="submit" value="Enviar">
 
 </form>
-
-<?php
-   
-    if(isset($_POST['tipo'])){
-        $opcion = $_POST['tipo'];
-        $ruta= $opcion . ".php";
-        echo($ruta);  
-         
-        header("Location:" . $ruta );
-    }
-?>
 
 </body>
 </html>

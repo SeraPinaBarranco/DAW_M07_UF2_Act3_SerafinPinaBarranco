@@ -28,7 +28,8 @@
         }else{
             echo "<p>HAS ACERTADO, $num!!!</p>";
 
-            $_SESSION = array();//deja el array de sesion vacio
+            unset($_SESSION['aleatorio']);//deja el array de sesion vacio
+            session_unset();
             session_destroy();//elimina la sesion
         }
 
