@@ -2,8 +2,7 @@
     session_start();
 
     $plaza = $_POST['coche'];
-
-    
+       
     if($plaza == "g"){//si el coche es grande, aparcara en plaza grande
         aparca_grande("grande");
        
@@ -13,7 +12,7 @@
     }
 
     function aparca_grande($la_plaza){ 
-
+       
         foreach ($_SESSION['gran'] as $indice => $valor) {
             if($valor == 0){              
                 $_SESSION['gran'][$indice] = 1; 
