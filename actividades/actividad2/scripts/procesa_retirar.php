@@ -1,11 +1,10 @@
 <?php
     session_start();
-    echo $_POST['plaza'];
-
+   
     $tipo = $_POST['coche'];
     
     if(!empty($_POST['plaza']) || $_POST['plaza'] === "0"){
-        echo ("entra");
+       
         $plaza= intval($_POST['plaza']);
         quitar_plaza($tipo, $plaza);
     }else{
@@ -34,7 +33,12 @@
         }else{
             echo "Numero de plaza inexistente";
         }
+        
+        redirigir();
+    }
 
+    function redirigir(){
+        header("Refresh: 3; url=" . "../actividad2.php");
     }
 
 ?>

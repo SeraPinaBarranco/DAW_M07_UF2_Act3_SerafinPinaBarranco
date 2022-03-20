@@ -25,7 +25,7 @@
         <input type="number" name="plaza" id="plaza" min=0 max=14>
     </label>
     <br><br>
-    <input type="submit" value="Aparcar">
+    <input type="submit" value="Retirar">
 
 </form>
     

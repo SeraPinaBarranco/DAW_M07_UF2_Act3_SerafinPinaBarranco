@@ -21,13 +21,7 @@ function ver_plazas(){
     echo("<h3>Plazas pequeñas:</h3>");
     echo("<ul>");
     foreach ($_SESSION['peq'] as $indice => $valor) {
-        // if($valor == 0){
-            //     $plaza = "libre";
-            // }else{
-            //     $plaza= "ocupada";
-        // }
         echo("<li> Plaza ". ($indice /*+ 1*/) . ": $valor </li>");
-                
     }
     echo("</ul>");
             
