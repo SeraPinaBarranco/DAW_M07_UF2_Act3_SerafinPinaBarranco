@@ -2,10 +2,10 @@
     require_once("futbolista.php");
     class Portero extends Futbolista{
         private $paradas;
-        private $goles;
+        //private $goles;
         private $puntos;
 
-        public function __construct($nombre, $dorsal, $goles, $paradas, $puntos)
+        public function __construct($nombre, $dorsal, $goles, $paradas)
         {
             parent::__construct($nombre, $dorsal, $goles);
             $this->paradas = $paradas;
@@ -28,18 +28,19 @@
 
         public function set_goles($goles)
         {
-            $this->goles = $goles;
+            parent::set_goles($goles);
+            //$this->goles = ;
         }
 
-        public function set_puntos($p)
+        public function set_puntos()
         {
-            $this->puntos = $this->paradas * 5 + ($this->goles * 30);
+            $this->puntos = $this->paradas * 5 + (parent::get_goles() * 30);
            
         }
 
         public function __toString()
         {
-            return parent::__toString() . " --- Paradas: $this->paradas --- Puntuación: $this->puntos";
+            return parent::__toString() . " --- Puntuación: $this->puntos";
         }
 
 
