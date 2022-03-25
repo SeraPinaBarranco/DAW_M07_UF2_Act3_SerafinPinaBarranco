@@ -1,32 +1,34 @@
 <?php       
         session_start();     
-        
-        if(empty($_POST['numero'])){ 
+
+        if($_POST['numero']==="0"){
+           
+            $numero_input= $_POST['numero'];
+        }elseif(empty($_POST['numero'])){ 
             atras();
             exit ("El número no puede estar vacio");           
         }else{
             $numero_input= $_POST['numero'];
-
         }
         
-        $num;
+        
         
         //Si la variable de sesion existe, la almacena en $num
         if(isset($_SESSION['aleatorio'])){
             $num =  $_SESSION['aleatorio'];
-            echo "existe";
+            
         }else{
             $_SESSION['aleatorio'] = genera_aleatorio();
             $num= $_SESSION['aleatorio'];
-            echo "no existe";
+            
         }
     
         if($numero_input < $num){
-            echo("<p> El número que buscas es mayor que $numero_input ($num)</p>");            
+            echo("<h2> El número que buscas es mayor que $numero_input ( El número a buscar es el $num)</h2>");            
         }elseif ($numero_input > $num) {
-             echo("<p> El número que buscas es menor que $numero_input ($num)</p>");
+             echo("<h2> El número que buscas es menor que $numero_input ($num)</h2>");
         }else{
-            echo "<p>HAS ACERTADO, $num!!!</p>";
+            echo "<h1>HAS ACERTADO, $num!!!</h1>";
 
             unset($_SESSION['aleatorio']);//deja el array de sesion vacio
             session_unset();

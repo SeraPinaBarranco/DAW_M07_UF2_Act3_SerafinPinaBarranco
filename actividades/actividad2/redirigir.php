@@ -7,8 +7,8 @@
     
     if(isset($_SESSION['peq']) == false && isset($_SESSION['gran']) == false){ //Si no hay variable de sesion se crean los dos arrays
        echo ("Creadas");
-        $_SESSION['peq'] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-        $_SESSION['gran'] = [0,0,0,0,0,0,0,0,0,0];
+        $_SESSION['gran'] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        $_SESSION['peq'] = [0,0,0,0,0,0,0,0,0,0];
     }else{
         echo (" Ya Creadas");        
     }

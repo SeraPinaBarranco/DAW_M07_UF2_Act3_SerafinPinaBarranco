@@ -34,7 +34,7 @@
 
         public function set_puntos()
         {
-            $this->puntos = $this->paradas * 5 + (parent::get_goles() * 30);
+            $this->puntos = ($this->paradas * 5) + (parent::get_goles() * 30);
            
         }
 

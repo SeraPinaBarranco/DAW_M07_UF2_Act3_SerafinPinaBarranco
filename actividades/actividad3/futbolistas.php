@@ -1,16 +1,7 @@
 <?php
     require "models/portero.php";
     require "models/campo.php";
-
-    // $p1 = new Portero("Buyo", 1, 0, 10);
-    // $j1 = new Campo("Zidane", 10, 3, 23, 2, 3);
-
-    // $p1->set_puntos();
-    // echo $p1->__toString() . "<br> <br>";
-
-    // $j1->set_puntos();
-    // echo $j1->__toString();
-
+       
     $portero1 = new Portero("Buyo", 1, 0, 10);
     $portero1->set_puntos();
 
