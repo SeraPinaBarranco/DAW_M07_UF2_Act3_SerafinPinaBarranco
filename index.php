@@ -23,8 +23,7 @@
 
     <h2>Actividad 3</h2>
 
-        <!-- <a href="actividades/actividad3/futbolistas.php">Ir a actividad 3</a> -->
-        <a href="actividades/actividad3/models/prueba.php">Ir a actividad 3</a>
+        <a href="actividades/actividad3/futbolistas.php">Ir a actividad 3</a>
     
     <h2>Fin actividad 3</h2>
 </body>

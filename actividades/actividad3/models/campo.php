@@ -6,9 +6,9 @@
         private $recuperaciones;
         private $puntos;
 
-        public function __construct($nombre, $dorsal, $goles, $pases, $recuperaciones, $puntos)
+        public function __construct($nombre, $dorsal, $goles, $pases, $recuperaciones)
         {
-            parent::__construct($nombre, $dorsal, $goles);
+            parent::__construct($nombre, $dorsal, $goles);            
             $this->pases = $pases;
             $this->recuperaciones= $recuperaciones;
         }
@@ -36,13 +36,13 @@
 
         public function __toString()
         {
-            return parent::__toString() . " --- Pases: $this->pases --- Recuperaciones: $this->recuperaciones";
+            return parent::__toString() . " --- Puntos: $this->puntos";
         }
 
         
-        public function set_puntos($p)
+        public function set_puntos()
         {
-            $this->puntos = ($this->pases * 2) + ($this->recuperaciones * 3) + ($this->goles * 30);
+            $this->puntos = ($this->pases * 2) + ($this->recuperaciones * 3) + (parent::get_goles() * 30);
            
         }
     }

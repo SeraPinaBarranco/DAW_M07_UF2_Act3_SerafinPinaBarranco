@@ -44,7 +44,7 @@
 
         public function __toString()
         {
-            return "Nombre: $this->nombre --- Dorsal: $this->dorsal --- Goles: $this->goles ";
+            return "Nombre: $this->nombre --- Dorsal: $this->dorsal";
         }
 
 
